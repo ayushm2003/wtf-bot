@@ -32,6 +32,6 @@ pip install -r requirements.txt
 export OPENAI_API_KEY=sk-...
 streamlit run app.py
 ```
+<br>
 
-
-> Still working features like speaker attribution, etc.
+> Note: Still working features like speaker attribution, etc.
