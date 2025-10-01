@@ -4,3 +4,10 @@ primaryColor = "#111111"
 textColor = "#111111"
 backgroundColor = "#ffffff"
 secondaryBackgroundColor = "#f6f6f6"
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+headless = true
+enableCORS = false
