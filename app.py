@@ -4,7 +4,7 @@ from openai import OpenAI
 
 st.set_page_config(page_title="Ask WTF", page_icon="")
 
-client = OpenAI()
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 index = faiss.read_index("data/processed/wtf.index")
 chunks = [json.loads(line) for line in open("data/processed/chunks.jsonl")]
 
