@@ -34,4 +34,4 @@ streamlit run app.py
 ```
 <br>
 
-> Note: Still working features like speaker attribution, etc.
+> Note: Speaker attribution is still a work in progress.
