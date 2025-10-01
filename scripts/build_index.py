@@ -27,6 +27,7 @@ for seg in segments:
     if len(buf) > 500:
         chunks.append({
             "video_id": buf_meta["video_id"],
+			"title": buf_meta.get("title",""),
             "start": buf_meta["start"],
             "url": buf_meta["url"],
             "text": buf.strip()

@@ -11,6 +11,7 @@ os.makedirs(os.path.dirname(out_path), exist_ok=True)
 with open(out_path, "w", encoding="utf-8") as out:
     for vtt_path in glob.glob("data/raw/*.en.vtt"):
         base = os.path.basename(vtt_path)
+        title = base.rsplit("[", 1)[0].strip()
         # Extract the YouTube ID inside square brackets [ID]
         match = re.search(r"\[([A-Za-z0-9_-]{6,})\]", base)
         video_id = match.group(1) if match else base
@@ -27,6 +28,7 @@ with open(out_path, "w", encoding="utf-8") as out:
             url = f"https://www.youtube.com/watch?v={video_id}&t={int(start_s)}s"
             rec = {
                 "video_id": video_id,
+				"title": title,
                 "start": start_s,
                 "end": end_s,
                 "text": text,
